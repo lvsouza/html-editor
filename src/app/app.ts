@@ -1,8 +1,18 @@
-import { Container, FC, Text } from "ui-build";
+import { FC, Text } from "ui-build";
+
+import { LayoutBase } from "./shared/layouts";
 
 export const App: FC = () => {
-  return Container({
-    children: [
+  return LayoutBase({
+    left: [
+      Text({ text: 'Meu teste 1' }),
+      Text({ text: 'Meu teste 2' }),
+    ],
+    center: [
+      Text({ text: 'Meu teste 1' }),
+      Text({ text: 'Meu teste 2' }),
+    ],
+    right: [
       Text({ text: 'Meu teste 1' }),
       Text({ text: 'Meu teste 2' }),
     ]
