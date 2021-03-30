@@ -3224,10 +3224,10 @@ typescript@^4.2.3:
   resolved "https://registry.yarnpkg.com/typescript/-/typescript-4.2.3.tgz#39062d8019912d43726298f09493d598048c1ce3"
   integrity sha512-qOcYwxaByStAWrBf4x0fibwZvMRG+r4cQoTjbPtUlrWjBHbmCAww1i448U0GJ+3cNNEtebDteo/cHOR3xJ4wEw==
 
-ui-build@^0.0.2:
-  version "0.0.2"
-  resolved "https://registry.yarnpkg.com/ui-build/-/ui-build-0.0.2.tgz#9686ba9be6e76a8deb44d0eba79f8317815f011a"
-  integrity sha512-CAQaHdK/umMr6F1s6Bild/p+TpWamHTIDz/z4vsIoQ8mIQXt46fZC8gsbdFcwHMSetpv5OKjPGbpp7G36U0CTQ==
+ui-build@^0.0.5:
+  version "0.0.5"
+  resolved "https://registry.yarnpkg.com/ui-build/-/ui-build-0.0.5.tgz#5823fb69094bd42da931549641b385e7c042a3b2"
+  integrity sha512-HEJGeKVOx1uSgfRrmpg+NW5HQ7LS0dRE3nGfxFvNa88A5LLRfWz4V6ODefn4S7DhiOdKx9wVq0raqg/q67hd2Q==
 
 union-value@^1.0.0:
   version "1.0.1"

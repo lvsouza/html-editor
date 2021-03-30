@@ -5,7 +5,7 @@
     "start": "webpack serve --config ./config/webpack.dev.js"
   },
   "dependencies": {
-    "ui-build": "^0.0.2"
+    "ui-build": "^0.0.5"
   },
   "devDependencies": {
     "file-loader": "^6.2.0",
