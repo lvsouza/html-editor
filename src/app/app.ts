@@ -1,6 +1,7 @@
 import { FC, Text } from "ui-build";
 
 import { LayoutBase } from "./shared/layouts";
+import './styles/global.css';
 
 export const App: FC = () => {
   return LayoutBase({
