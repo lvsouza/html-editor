@@ -5,7 +5,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
   mode: 'production',
   context: __dirname,
-  entry: './../src/app.ts',
+  entry: './../src/index.ts',
   output: {
     path: path.resolve(__dirname, '..', 'dist'),
     filename: 'index.js',
@@ -19,6 +19,14 @@ module.exports = {
         use: {
           loader: 'ts-loader',
         }
+      },
+      {
+        test: /\.(png|jpe?g|gif)$/i,
+        use: [
+          {
+            loader: 'file-loader',
+          },
+        ],
       }
     ]
   },
