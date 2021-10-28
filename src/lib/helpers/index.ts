@@ -1,4 +1,4 @@
 export * from './CreateStyle';
 export * from './CreateText';
-export * from './CreateUi';
+export * from './CreateComponent';
 export * from './CreateEl';

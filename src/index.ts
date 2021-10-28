@@ -12,4 +12,4 @@ createStyle({
   }
 });
 
-UiBuild.Render(App(), document.getElementById('root'));
+UiBuild.Render(App()[1], document.getElementById('root'));

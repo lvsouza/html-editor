@@ -1,22 +1,15 @@
-import { createEl, createUi } from '../../../lib';
+import { createEl, createComponent } from '../../../lib';
 
 import { ThreeColumns } from '../../shared/components';
 
 
-const EditorUi = createUi(() => {
+export const Editor = createComponent(() => {
   const panel1 = createEl('div');
   const panel2 = createEl('div');
   const panel3 = createEl('div');
 
 
-  const container = ThreeColumns([panel1, panel2, panel3]);
+  const [, treeColumns] = ThreeColumns([panel1, panel2, panel3]);
 
-  return [{}, container];
+  return [{}, treeColumns];
 });
-
-export const Editor = () => {
-  const [{ }, container] = EditorUi();
-
-
-  return container;
-}

@@ -1,5 +1,7 @@
+import { createComponent } from '../lib';
+
 import { Editor } from './pages';
 
-export const App = () => {
+export const App = createComponent(() => {
   return Editor();
-}
+});
