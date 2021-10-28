@@ -1,5 +1,5 @@
-import * as UiBuild from 'ui-build';
+import { UiBuild } from "./lib";
 
-import { App } from './app/app';
+import { App } from './app/App';
 
-UiBuild.Render(document.getElementById('root') as any, App());
+UiBuild.Render(App(), document.getElementById('root'));

@@ -1,14 +1,26 @@
-import { FC } from "ui-build";
+import { createEl, createUi } from '../lib';
 
 
-import { LayoutBase } from "./shared/layouts";
-import { EditorPage } from "./pages";
-import './styles/index.css';
+const UiRender = createUi(() => {
+  const divContainer = createEl('div');
+  const input = createEl('input');
+  const paragraph = createEl('p');
 
-export const App: FC = () => {
-  return LayoutBase({
-    children: [
-      EditorPage(),
-    ],
-  });
-};
+  paragraph.innerHTML = 'Text: ';
+
+  divContainer.append(paragraph, input);
+
+
+  return [{ paragraph, input }, divContainer];
+})
+
+export const App = () => {
+  const [{ paragraph, input }, main] = UiRender();
+
+
+  input.oninput = () => {
+    paragraph.innerText = `Text: ${input.value}`;
+  }
+
+  return main;
+}

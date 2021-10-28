@@ -56,6 +56,5 @@ module.exports = {
   devServer: {
     contentBase: path.join(__dirname, '..', 'dist'),
     port: portFinderSync.getPort(3000),
-    host: '0.0.0.0',
   }
 }

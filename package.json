@@ -5,9 +5,10 @@
     "start": "webpack serve --config ./config/webpack.dev.js"
   },
   "dependencies": {
-    "ui-build": "^0.0.10"
+    "uuid": "^8.3.2"
   },
   "devDependencies": {
+    "@types/uuid": "^8.3.0",
     "css-loader": "^5.2.0",
     "file-loader": "^6.2.0",
     "html-webpack-plugin": "^5.3.1",
