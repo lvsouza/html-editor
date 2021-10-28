@@ -5,6 +5,9 @@
     "start": "webpack serve --config ./config/webpack.dev.js"
   },
   "dependencies": {
+    "jss": "^10.8.2",
+    "jss-plugin-camel-case": "^10.8.2",
+    "jss-preset-default": "^10.8.2",
     "uuid": "^8.3.2"
   },
   "devDependencies": {

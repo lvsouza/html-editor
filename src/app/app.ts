@@ -1,25 +1,76 @@
-import { createEl, createUi } from '../lib';
+import { createEl, createUi, createStyle, createText } from '../lib';
 
 
-const UiRender = createUi(() => {
+const classesButton = createStyle({
+  button: {
+    backgroundColor: 'red',
+    borderRadius: 4,
+    border: 'none',
+    padding: 4,
+  },
+});
+const Button = (text?: string) => {
+  const buttonElement = createEl('button');
+
+  buttonElement.classList.add(classesButton.button);
+
+  if (text) buttonElement.appendChild(createText(text));
+
+  return buttonElement
+}
+
+
+
+const classes = createStyle({
+  container: {
+    backgroundColor: 'blue',
+    borderRadius: 4,
+    padding: 8,
+  },
+});
+
+const AppUi = createUi(() => {
   const divContainer = createEl('div');
-  const input = createEl('input');
-  const paragraph = createEl('p');
+  divContainer.classList.add(classes.container);
 
-  paragraph.innerHTML = 'Text: ';
+  const buttonSomar = Button('Somar');
+  const buttonSubtrair = Button('Subtrair');
+  const buttonReset = Button();
 
-  divContainer.append(paragraph, input);
+  const textToCountSubtrair = createText('0');
+  const textToCountSomar = createText('0');
+  const textToCountReset = createText('0');
+  buttonSubtrair.appendChild(textToCountSubtrair);
+  buttonSomar.appendChild(textToCountSomar);
+  buttonReset.appendChild(textToCountReset);
 
 
-  return [{ paragraph, input }, divContainer];
-})
+  const changeCountText = (value: string) => {
+    const newvalue = value;
+    textToCountSubtrair.data = newvalue;
+    textToCountSomar.data = newvalue;
+    textToCountReset.data = newvalue;
+    return true;
+  };
+
+  divContainer.append(buttonSubtrair, buttonSomar, buttonReset);
+
+  return [{ changeCountText, buttonSomar, buttonSubtrair }, divContainer];
+});
 
 export const App = () => {
-  const [{ paragraph, input }, main] = UiRender();
+  const [{ changeCountText, buttonSomar, buttonSubtrair }, main] = AppUi();
 
+  let counter = 0;
 
-  input.oninput = () => {
-    paragraph.innerText = `Text: ${input.value}`;
+  buttonSomar.onclick = () => {
+    counter++;
+    changeCountText(String(counter));
+  }
+
+  buttonSubtrair.onclick = () => {
+    counter--;
+    changeCountText(String(counter));
   }
 
   return main;

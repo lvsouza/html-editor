@@ -1,5 +1,5 @@
-import { TUiProcessor, TUiProcessorResult, TUiProcessorRecordOfComponents } from '../types';
+import { TUiProcessor, TUiProcessorResult } from '../types';
 
-export function createUi<C extends TUiProcessorRecordOfComponents, R extends HTMLElement>(processor: TUiProcessor<C, R>) {
+export function createUi<C, R extends HTMLElement>(processor: TUiProcessor<C, R>) {
   return () => processor() as TUiProcessorResult<C, R>;
 };
