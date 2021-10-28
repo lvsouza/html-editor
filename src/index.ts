@@ -6,6 +6,8 @@ createStyle({
   '@global': {
     body: {
       backgroundColor: 'lightgray',
+      padding: 0,
+      margin: 0,
     }
   }
 });
